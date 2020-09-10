@@ -8,11 +8,14 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class PrimeFinder {
+    ArrayList<Concurrent> hilos;
+    public PrimeFinder(){
+        hilos=new ArrayList<>();
+    }
 
 
-    public static void findPrimes(BigInteger _a, BigInteger _b, PrimesResultSet prs) {
+    public  void findPrimes(BigInteger _a, BigInteger _b, PrimesResultSet prs) {
 
-        ArrayList<Concurrent> hilos = new ArrayList<>();
         BigInteger a = _a;
         BigInteger b = _b;
         BigInteger cantidad = new BigInteger("4");
@@ -25,19 +28,12 @@ public class PrimeFinder {
             Concurrent hilo = new Concurrent(new BigInteger(String.valueOf(inicio + a.intValue())), new BigInteger(String.valueOf(fin + a.intValue())), prs);
             hilos.add(hilo);
         }
-        for (Concurrent i : hilos) {
-            i.start();
-        }
-        for (Concurrent i : hilos) {
-            try {
-                i.join();
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-
-        }
 
     }
 
+
+    public ArrayList<Concurrent> gethilos(){
+        return hilos;
+    }
 
 }

@@ -33,4 +33,11 @@ public class Concurrent extends Thread {
             i=i.add(BigInteger.ONE);
         }
     }
+
+    public void pausar(){
+        this.suspend();
+    }
+    public void resumir(){
+        this.resume();
+    }
 }
