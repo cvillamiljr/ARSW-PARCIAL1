@@ -5,13 +5,14 @@ import edu.eci.arsw.api.primesrepo.model.FoundPrime;
 import java.util.List;
 
 /**
- * @author Santiago Carrillo
- * 2/22/18.
+ * @author Cesar Villamil
+ * 10/09/2020
  */
+
 public interface PrimeService
 {
 
-    void addFoundPrime( FoundPrime foundPrime );
+    void addFoundPrime( FoundPrime foundPrime ) throws FoundPrimeException;
 
     List<FoundPrime> getFoundPrimes();
 

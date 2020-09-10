@@ -1,8 +1,8 @@
 package edu.eci.arsw.api.primesrepo.model;
 
 /**
- * @author Santiago Carrillo
- * 2/22/18.
+ * @author Cesar Villamil
+ * 10/09/2020
  */
 public class FoundPrime
 {
