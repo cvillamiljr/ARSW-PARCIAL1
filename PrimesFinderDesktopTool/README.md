@@ -9,4 +9,8 @@
 >
 >   ![](img/concurrent.png)
 >
+> 2. Se intento utilizar el evento del mouse, para poder resumir y pausar el programa de la siguiente forma:
+>
+>   ![](img/mouse.png)
+>
 >
