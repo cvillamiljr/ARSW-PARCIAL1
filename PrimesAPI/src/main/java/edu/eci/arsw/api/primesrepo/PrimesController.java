@@ -46,7 +46,6 @@ public class PrimesController
             return new ResponseEntity<>("El numero ya existe",HttpStatus.BAD_REQUEST);
         }
 
-
     }
 
 

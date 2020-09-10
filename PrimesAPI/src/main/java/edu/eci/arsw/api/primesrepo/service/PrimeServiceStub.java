@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 /**
  * @author Cesar Villamil
@@ -15,10 +16,10 @@ import java.util.List;
 public class PrimeServiceStub implements PrimeService
 
 {
-    private List<FoundPrime> primos;
+    private CopyOnWriteArrayList<FoundPrime> primos;
 
     public PrimeServiceStub() {
-        primos = new ArrayList<>();
+        primos = new CopyOnWriteArrayList<>();
         FoundPrime Federer = new FoundPrime();
         Federer.setUser("Federer");
         Federer.setPrime("656601");
@@ -52,10 +53,8 @@ public class PrimeServiceStub implements PrimeService
             if(iterador.getPrime().equals(fp.getPrime())){
                 throw new FoundPrimeException("El numero ya existe");
             }
-            else{
-                primos.add(fp);
-            }
         }
+        primos.add(fp);
     }
 
     @Override
